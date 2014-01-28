@@ -1,0 +1,22 @@
+
+<a href="#">Carros {{(cars|filter:{selected:true}).length}}</a>
+
+ <table>
+  <thead>
+    <tr>
+      <th>...</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="car in cars">
+      <td><input ng-model="car.selected" ng-true-value="true" ng-false-value="false" ng-change="onCheck" type="checkbox" /></td>
+      <td><strong>{{ car.model }}</strong></td>
+      <td>{{ car.brand }}</td>
+      <td>{{ car.value }}
+    </tr>
+  </tbody>
+</table>
+
+Valor Selectionado: 
